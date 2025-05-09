@@ -1,44 +1,58 @@
-# Ex.No:1(E)  STATIC VARIABLE
+# Ex.No:1(E)  STATIC VARIABLE AND FUNCTION
 
 ## AIM:
-To write a Java program to print student details (name and age), where age is the same for all students. Use a static variable to represent the age and demonstrate its use in accessing a shared value across all class objects
+To Multiplication of two number using 'static' method
 
 ## ALGORITHM :
-1.	Start the program.
-2.	Create a class named Student.
-3.	Declare a static variable age in the Student class.
-4.	Declare an instance variable name.
-5.	Create a constructor to initialize the student's name.
-6.	Define a method displayDetails() to print the student's name and age.
-7.	In the main method:
-I.	Assign a value to the static variable age.
-II.	Create multiple Student objects with different names.
-III.	Call the displayDetails() method for each student.
-8.	End the program.
 
+1. Start the program.
+2. Import the `java.util.Scanner` class.
+3. Define a class named `Multiplication`.
+4. Define a static method `multiply()` that takes two integers and returns their product.
+5. Define the `main()` method.
+6. Create a Scanner object to read user input.
+7. Read two integer inputs from the user: `num1` and `num2`.
+8. Call the `multiply()` method with `num1` and `num2` as arguments.
+9. Store the returned value in `result` and print it.
+10. End the program.
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Static Variable using Java
-Developed by: 
-RegisterNumber:  
+Program to implement a Static Variable and Function using Java
+Developed by: Muhammad Afshan A
+RegisterNumber: 212223100035
 */
 ```
+## PROGRAM SAMPLE INPUT:
+![alt text](image-1.png)
 
-## Sourcecode.java:
-
-
-
-
-
-
+## SOURCECODE.JAVA:
+```
+import java.util.Scanner;
+public class Multiplication 
+{
+    static int multiply(int num1,int num2)
+    {
+        return num1*num2;
+    }
+    
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt(); 
+        int num2 = scanner.nextInt();
+        int result = multiply(num1, num2);
+        System.out.println("multiplication is: " + result);
+        scanner.close();
+    }
+}
+```
 
 ## OUTPUT:
 
-
+![alt text](image-2.png)
 
 ## RESULT:
-Thus, the Java program for the concept of using a static variable for shared data was correctly implemented and verified successfully. 
-
+Thus, the Java program to perform multiplication of two numbers using a static method was implemented successfully and verified sucessfully.

@@ -1,19 +1,21 @@
 # Ex.No:2(D) MULTI-DIMENSIONAL ARRAY
 
 ## AIM:
-To create a java program that returns the sum of all the values in a 2D array.
+To write a java program to find the sum of all the elements present in a 2-D array.
 
 ## ALGORITHM :
 1.	Start the program.
-2.	Import `Scanner` and define class `sum`
-3.	In `main`:
--	a) Create `Scanner` object `sc`
--	b) Read `rows` and `cols` from user
--	c) Declare 2D array `arr[rows][cols]`
-4.	Populate `arr` using nested loops with user input
-5.	Initialize `sum` to `0`
-6.	Calculate the sum of all elements in `arr` using nested loops
-7.	Print "The sum of all values in the 2D array is: " + `sum`
+2.	Import `Scanner` using `java.util.Scanner` or `java.util.*` and define class `Main`
+3.	In `main` function:
+-	a) Initialize a 2D array with the given input values in the question.
+-	b) Pass the 2D array to the sum function as 2D array arguement.
+
+4.	In `sum` function with return type `void` and `int[][] arr` as parameter:
+
+- a) Initialize `sum` to `0`
+- b) Calculate the sum of `arr` using nested loops `i` and `j` with necessary conditions
+
+7.	Print "Sum of all elements is: `sum`" using `System.out.println` function
 8.	End
 
 
@@ -22,24 +24,49 @@ To create a java program that returns the sum of all the values in a 2D array.
  ```
 /*
 Program to implement a Multi Dimensional Array using Java
-Developed by: 
-RegisterNumber:  
+Developed by: Muhammad Afshan A
+RegisterNumber: 212223100035
 */
 ```
 
-## Sourcecode.java:
+## PROGRAM QUESTIONS AND SAMPLE INPUT:
 
+![alt text](image.png)
 
+## SOURCECODE.JAVA:
 
-
-
-
+```
+public class Main
+{
+    public static void sum(int[][] arr)
+    {
+        int sum = 0;
+        for(int i = 0; i < arr.length; i++)
+        {
+            for(int j = 0; j < arr[0].length; j++)
+            {
+                sum = sum + arr[i][j];
+            }
+        }
+        System.out.print("Sum of all elements is: " + sum);
+    }
+    public static void main(String[] args)
+    {
+        int[][] arr = {
+                {1, 2, 3, 4, 5},
+                {2, 4, 6, 8, 10},
+                {1, 3, 5, 7, 9}
+        };
+        sum(arr);
+    }
+}
+```
 
 ## OUTPUT:
 
-
+![alt text](image-1.png)
 
 ## RESULT:
-Thus the java program that returns the sum of all the values in a 2D array was executed successfully.
+Thus the java program to find the sum of all the elements present in a 2-D array was executed successfully.
 
 
