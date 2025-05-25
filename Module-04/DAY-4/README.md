@@ -1,50 +1,64 @@
 # Ex.No:4(D) FINAL & STATIC IN JAVA
 
 ## AIM:
-   To create a Java program to perform final & static keyword for below situation Employee object contains member 'Emp_Id'. It contains object named name, which contains its own informations such as Fname, Mname, Lname.
- 
+
+To Create a final class 'Class' with  Name, Id and Year as its member, make  Year as final variable with value "3th Year" and write  print() to display its member in the Output.
+
+*Note:*
+Create a Main class and access print() of Company class.<br>
+[Name- David, Id- S201]
+
 ## ALGORITHM :
-1.	Start the Program.
-2.	Define class `Name`:
--	a) Declare three `String` variables: `Fname`, `Mname`, and `Lname`
--	b) Define method `dispName(String fn, String mn, String ln)`:
--	i) Print the full name using the passed parameters `fn`, `mn`, and `ln`
-3.	Define class `Employee`:
--	a) Declare an integer variable `Emp_Id`
--	b) Create an instance of `Name` called `obj`
--	c) Define method `disp(int id)`:
--	i) Print the employee ID
--	ii) Create a new `Name` object and call `dispName("B", "Leo", "John")` to display the name
-4.	Define `Main` class with `main` method:
--	a) Create an `Employee` object `emp`
--	b) Call `emp.disp(101)` to display the employee details
-5.	End
 
+1. Start the Program.
+2. Define a final class `Sclass`:
 
+   * a) Declare String variables `Name`, `Id` and a final variable `Year`.
+   * b) Assign values: Name = "David", Id = "S201", Year = "3th Year".
+   * c) Define a method `print()` to print all the member variables.
+3. In the `Main` class:
 
-
-
+   * a) Create an object of `Sclass`.
+   * b) Call `print()` method.
+4. End
 
 ## PROGRAM:
- ```
+
+```
 /*
 Program to implement a final & Static using Java
-Developed by: 
-RegisterNumber:  
+Developed by: Muhammad Afshan A
+RegisterNumber: 212223100035
 */
 ```
 
-## Sourcecode.java:
+## PROGRAM QUESTION AND SAMPLE INPUT:
+![alt text](image.png)
 
+## SOURCECODE.JAVA:
 
+```
+final class Sclass {
+    String Name = "David";
+    String Id = "S201";
+    final String Year = "3th Year";
+    
+    void print() {
+        System.out.print("Student Details are,\nId is " + Id + "\nName is " + Name + "\nYear of Studying is " + Year);
+    }
+}
 
-
-
-
+public class Main {
+    public static void main(String[] args) {
+        Sclass obj = new Sclass();
+        obj.print();
+    }
+}
+```
 
 ## OUTPUT:
-
-
+![alt text](image-1.png)
 
 ## RESULT:
-Thus, the java program to perform final & static keyword was executed successfully.
+
+Thus, the Java program to perform final & static keyword was executed successfully.

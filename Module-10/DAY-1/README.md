@@ -1,41 +1,67 @@
-# Ex.No:10(A)         JAVA COLLECTION FRAMEWORK –ARRAY LIST
+# Ex.No:10(A) JAVA COLLECTION FRAMEWORK –ARRAY LIST
+
 ## AIM:
- To Create a Java Program to store n numbers (add elements of type Integer) and then display the n numbers using array List.
+To Create an arraylist and add the 4 cars name and add 3rd position one more car name and then display in alphabetical order.
 
 ## ALGORITHM:
-1.	Start the Program
-2.	Import `java.util.*` for input handling and list functionality
-3.	Define class `Snowdrop` with the `main` method:
--	a) Create `Scanner` object `sc` for input
--	b) Read an integer `n` to specify the number of elements
--	c) Create an `ArrayList` named `num` to store integers
-4.	Use a `for` loop to:
--	a) Read `n` integers from input and add each to `num`
-5.	Use an enhanced `for` loop to:
--	a) Iterate through `num` and print each element
-6.	End
+1. Start the program.
+2. Import `java.util.ArrayList`, `java.util.Collections`, and `java.util.Scanner`.
+3. Define the main class and main method.
+4. Create an `ArrayList<String>` named `cars`.
+5. Create a `Scanner` object to read user input.
+6. Read 4 car names from the user and add them to the `cars` list.
+7. Read another car name from the user and add it at the 3rd position (index 2) in the list.
+8. Sort the `cars` list in alphabetical order using `Collections.sort()`.
+9. Use a for-each loop to print all car names in the sorted list.
+10. Close the scanner.
+11. End the program.
 
 ## PROGRAM:
- ```
+
+```
 /*
 Program to implement a ARRAY LIST using Java
-Developed by: 
-RegisterNumber:  
+Developed by: Muhammad Afshan A
+RegisterNumber: 212223100035
 */
 ```
 
-## Sourcecode.java:
+## PROGRAM QUESTION AND SAMPLE INPUT:
+![alt text](image.png)
 
+## SOURCECODE.JAVA:
 
+```
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> cars = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
 
+        cars.add(scanner.nextLine());
+        cars.add(scanner.nextLine());
+        cars.add(scanner.nextLine());
+        cars.add(scanner.nextLine());
 
+        String newCar = scanner.nextLine();
+        cars.add(2, newCar);
 
+        Collections.sort(cars);
+
+        for (String car : cars) {
+            System.out.println(car);
+        }
+
+        scanner.close();
+    }
+}
+```
 
 ## OUTPUT:
-
-
+![alt text](image-1.png)
 
 ## RESULT:
-TThus the Java Program to store n numbers (add elements of type Integer) and then display the n numbers using array List was executed successfully.
-
+Thus the Java Program to create an ArrayList of car names, add an extra car at the 3rd position, and display the list in alphabetical order was executed successfully.

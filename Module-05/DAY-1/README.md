@@ -1,47 +1,72 @@
 # Ex.No:5(A)  DATA HIDING AND ENCAPSULATION
+
 ## AIM:
-To Create a java program to display name and location of the employee and use the encapsulation concepts
+
+To Write a java program to print even numbers from 1 to 100. Pass value 100 to setter method, use the encapsulation concepts.
 
 ## ALGORITHM :
-1.  Start the program
-2.	Define class `Employee`:
--	a) Declare two private `String` variables: `name1` and `name2`
--	b) Define `setname(String n1)` method to set `name1` to `n1`
--	c) Define `setname2(String n2)` method to set `name2` to `n2`
--	d) Define `get1()` method to return `name1`
--	e) Define `get2()` method to return `name2`
-3.	Define `Main` class with `main` method:
--	a) Create `Scanner` object `sc` for input
--	b) Read `name1` and `name2` from user input
--	c) Create ` Employee ` object `hl`
--	d) Use `hl.setname(name1)` and `hl.setname2(name2)` to set the names
--	e) Print the values of `hl.get1()` and `hl.get2()`
-4.	End
 
-
-
-
+1. Start the program
+2. Define class `Num`:
+   - a) Declare a private integer variable `num`
+   - b) Define `setNum(int N)` method to set the value of `num`
+   - c) Define `getNum()` method to return the value of `num`
+3. Define `Main` class with `main` method:
+   - a) Create `Scanner` object `sc` for input
+   - b) Read a number from user input
+   - c) Create `Num` object `obj`
+   - d) Use `obj.setNum(value)` to store the number
+   - e) Use `obj.getNum()` and loop from 1 to that number, printing even numbers
+4. End
 
 ## PROGRAM:
- ```
+
+```
 /*
 Program to implement a Data Hiding & Encapsulation using Java
-Developed by: 
-RegisterNumber:  
+Developed by: Muhammad Afshan A
+RegisterNumber: 212223100035
 */
 ```
 
-## Sourcecode.java:
+## PROGRAM QUESTION AND SAMPLE INPUT:
+![alt text](image.png)
 
+## SOURCECODE.JAVA:
 
+```
+import java.util.*;
+class Num {
+    private int num;
 
+    public int getNum() {
+        return num;
+    }
 
+    public void setNum(int N) {
+        num = N;
+    }
+}
 
-
+public class Main {
+    public static void main(String args[]) {
+        Num obj = new Num();
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        obj.setNum(A);
+        int get = obj.getNum();
+        for (int i = 1; i <= get; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+```
 
 ## OUTPUT:
-
-
+![alt text](image-1.png)
 
 ## RESULT:
-Thus , the  java program to display name and location of the employee and use the encapsulation concepts executed successfully.
+
+Thus, the Java program to print even numbers using encapsulation was executed successfully.

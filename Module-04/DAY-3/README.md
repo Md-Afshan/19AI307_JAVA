@@ -1,52 +1,66 @@
 # Ex.No:4(C)    CONSTRUCTOR CHAINING(SUPER KEYWORD)
 
+## QUESTION :
+* Create a class named 'Animal' which includes its constructor. [constructor will print " I am an Animal"]
+* Create a child class of 'Animal' named 'Dog' and add a its constructor [constructor will call its super-class constructor and print " I am a Dog"] 
+* Create a instance of Dog class and invoke the constructor using object.
 ## AIM:
 To Create a Java program to implement super keyword in constructor.
 
 ## ALGORITHM :
-1.  Start the Program.
-2.	Define class `College`:
--	a) Define method `display()` that prints "I am a Vehicle"
-3.	Define class `Student` that extends `College`:
--	a) Override method `display()` to print "I am a Car"
--	b) Define method `print()`:
--	i) Call `super.display()` to invoke `display()` from `College` class
--	ii) Call `this.display()` to invoke `display()` from `Student` class
-4.	Define `Main` class with `main` method:
--	a) Create a `Student` object `sc`
--	b) Call `sc.print()` to execute the `print()` method
-5.	End
 
+1. Start the Program
+2. Define class `Animal`:
 
+   * a) Define a constructor that prints "I am an animal"
+3. Define class `Dog` that extends `Animal`:
 
+   * a) In the constructor, call `super()` to invoke the superclass constructor
+   * b) Print "I am a dog"
+4. In the `main` method of class `Main`:
 
-
-
+   * a) Create a `Dog` object `obj`
+5. End
 
 ## PROGRAM:
- ```
+
+```
 /*
 Program to implement a Constructor Chaining using Java
-Developed by: 
-RegisterNumber:  
+Developed by: Muhammad Afshan A
+RegisterNumber: 212223100035
 */
 ```
 
-## Sourcecode.java:
+## PROGRAM QUESTION AND SAMPLE INPUT:
+![alt text](image.png)
 
+## SOURCECODE.JAVA:
 
+```
+class Animal {
+    Animal() {
+        System.out.println("I am an animal");
+    }
+}
 
+class Dog extends Animal {
+    Dog() {
+        super();
+        System.out.println("I am a dog");
+    }
+}
 
-
-
+public class Main {
+    public static void main(String[] args) {
+        Dog obj = new Dog();
+    }
+}
+```
 
 ## OUTPUT:
-
-
+![alt text](image-1.png)
 
 ## RESULT:
-Thus the java program for constructor chaining was executed successfully.
 
-
-
-
+Thus the Java program for constructor chaining was executed successfully.
